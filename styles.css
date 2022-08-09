@@ -1,0 +1,11 @@
+*{margin: 0px;padding: 0px;}
+body {
+    background-color: rgb(123, 145, 241);
+ }
+ .header {background-color: rgb(8, 227, 243);}
+ .divclass {background-color: rgb(235, 178, 243);}
+ h6 {color: rgb(248, 246, 246);}
+ h2 {color: black;}
+ h5{color: rgb(54, 53, 53);}
+ h3{color: rgb(36, 28, 28);}
+ h5 span {color: blue;}
