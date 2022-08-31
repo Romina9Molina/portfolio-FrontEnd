@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"  name="viewport" content="width=device-width, initial-scale=1">
   <title>Maquetado html</title>
   <meta content="author" content="romina molina">
   <link  rel="stylesheet"  href="./styles.css">  <!-- CSS only -->
@@ -34,10 +34,82 @@
              </div>
       
             <div class="col-sm-8 .offset-sm-8"> 
-                <button type="button" class="btn btn-primary position-absolute top-0 end-0">Login</button>
+                <button type="button"  id="abrirModal" class="btn btn-primary position-absolute top-0 end-0">Login</button>
+                       <!-- Ventana modal, por defecto no visiblel -->
+                     <div id="ventanaModal" class="modal">
+                         <div class="contenido-modal">
+                         <span class="cerrar">&times;</span>
+                            <h2>Login</h2>
+                                  <div>
+                                    <form  action="#">
+                                      <div class="mb-4">
+                                        <label for="email"  class="form-label">Username</label>
+                                        <input type="email" class="form-control"  name="email"> 
+                                      </div>
+                                      
+
+
+                                      <div class="mb-4">
+                                        <label for="password"  class="form-label">Password</label>
+                                        <input type="password" class="form-control"  name="password">
+
+                                      </div>
+
+
+                                       <!-- Coloco un  Checkbox para que el usuario pueda mantener la sesión abierta-->
+                                      <div class="mb-4" form-check>
+                                       <input type="checkbox" name="connected" class="form-check-input">
+                                       <label for="connected" class="form-check-label">Mantenerme conectado</label>
+                                      </div>
+
+
+                                      <div  class="d-grid"> 
+                                        <button type="submit" class="btn  btn-primary">Iniciar sesión</button>
+                                      </div>
+
+
+                                      <div class="my-3">
+                                        <span>Aún no tenes cuenta? <a href="#">Registrate</a></span>
+                                        <span><a href="#">Recuperar password</a></span>
+                                      </div>
+                                    </form>
+                         
+
+
+
+                                       <div class="container w-100 my-5">
+                                         <div class="row text-center">
+                                          <div  class="col-12">Iniciar sesión</div>                                        </div>
+                                         
+                                       </div>
+
+                                       <div class="row">
+                                        <div class="col">
+                                          <button class="btn btn-outline-primary w-100 my-1">
+                                            <div class="row align-items-center">
+                                              <div class="col-2">
+                                                <img src="./Imagenes/icono de google.png" width="32" alt="">
+
+                                              </div>
+
+                                              <div class="col-10  " >Google</div>
+                                            </div>
+                                          </button>
+
+                                       </div>
+
+
+
+                                       </div>
+                         </div>
+                    </div>
             </div>
 
         </nav>
+
+       
+
+    
 
 
 
