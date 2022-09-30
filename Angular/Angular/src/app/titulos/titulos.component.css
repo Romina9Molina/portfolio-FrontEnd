@@ -1,0 +1,21 @@
+.divclass {
+    border-radius: 12px;
+    margin: 10px 10px;      
+    padding: 10px;
+    background: linear-gradient(450deg,darkblue, black);
+    border: 2px solid rgba(0,0,0,0.06);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  h2 {
+    margin-bottom: 80px;
+    letter-spacing: 2px;
+    text-align: left;
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+   }
+ 
+  h5{color: rgb(51, 198, 243);
+    font-size: 25px;}

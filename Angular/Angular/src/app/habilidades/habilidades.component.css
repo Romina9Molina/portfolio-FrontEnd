@@ -1,0 +1,86 @@
+.caja-padre{
+    width:100% ;
+    margin: 4px 4px;      
+    padding: 5px;
+        
+  }
+
+  .contenedor{
+    width: 99%;
+    margin: 4px 4px;      
+    padding: 5px;
+    background: linear-gradient(450deg,darkblue, black);
+    border: 2px solid rgba(0,0,0,0.06);
+    border-radius: 12px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  .contenerdor *{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(13, 168, 230);
+    font-weight: 100;
+    
+  }
+
+  h2 {
+    margin-bottom: 80px;
+    letter-spacing: 2px;
+    text-align: left;
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+   }
+
+   .skills:not(:last-child) {
+    margin-bottom: 50px;
+ 
+  }  
+ 
+ 
+  .detalles{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+ 
+  .menu{
+    position: relative;
+    border: 1px solid  rgb(30, 191, 219);
+    border-radius: 20px;
+    margin-bottom: 20px;
+ 
+  }
+ 
+   .menu div{
+    position: relative;
+    width: 0;
+    height: 8px;
+    border-radius: 10px;
+    background-color: blue;
+ 
+   }
+ 
+ 
+   #html-menu{
+    animation: resolucion-barra 2s forwards;
+   }
+ 
+   @keyframes resolucion-barra{
+      100%{
+          width: 80%;}
+   }
+ 
+ 
+ #javascript-menu{
+    animation: diseño-barra 2s forwards;
+   }
+ 
+   @keyframes diseño-barra{
+     100%{
+       width: 75%;
+     }
+    }
+
+    span {color: rgb(156, 156, 253);}

@@ -1,0 +1,32 @@
+
+ .header {    
+    
+    height: max-content;
+    }
+
+
+
+ .banner {
+   background-image: url(../../assets/imagenes/imagen_banner.jpg);
+   background-size: cover;
+   position: absolute;
+   z-index: -1;
+   width:99.25% ;
+   height: 400px;
+   margin-left: 10px;
+   margin-right: 30px;
+ }   
+
+ 
+
+ .box {
+    z-index: 1; 
+    position: absolute;   
+    width: 250px;
+    height: 250px;
+    background-image: url(../../assets/imagenes/mifoto.jpeg);
+    background-size: cover;
+    border-radius: 50%;  
+    margin-top: 250px;
+    margin-left: 20px;
+ }
