@@ -11,6 +11,7 @@ import { HistorialLaboralComponent } from './historial-laboral/historial-laboral
 import { AcademicoComponent } from './academico/academico.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
     HistorialLaboralComponent,
     AcademicoComponent,
     HabilidadesComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

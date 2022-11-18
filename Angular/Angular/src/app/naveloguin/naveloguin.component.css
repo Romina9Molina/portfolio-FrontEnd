@@ -1,8 +1,31 @@
-.nave{
-    background-color: black;
+
+ 
+  .nave{
+    background: linear-gradient(450deg,darkblue,black);
+    height: 200px;
+   }
+  
+   .img_ap{
+    animation: movimiento 2.5s linear infinite;
+   }
+   .img_ap img{
+   width: 150px;
+   height: 100px;
+   display:block;
+   
+   }
+  
+  @keyframes movimiento{
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(30px);
+    }
+    100%{transform: translateY(0);
+  
+    }
   }
- 
- 
  
   /* Fondo modal: negro con opacidad al 50% */
  .modal {
@@ -59,6 +82,22 @@
 
   h6 {  color: rgb(248, 246, 246); 
     font-size: 20px}
+
+    h6 {
+      position: absolute;
+      right: 0%;
+      width: 0%;
+      background-color: rgb(3, 100, 190);
+      border-left: 1px solid rgb(154, 15, 189);
+      animation: escribir 5s  steps(30) infinite alternate;
+  
+  
+     }
+  
+     @keyframes escribir {
+      from {width: 100%;}
+      to {width: 0%;}
+     }
  
  
  
