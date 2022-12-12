@@ -62,14 +62,24 @@
  
    }
  
- 
+
    #html-menu{
-    animation: resolucion-barra 2s forwards;
+    animation: dis-barra 2s forwards;
    }
  
-   @keyframes resolucion-barra{
+   @keyframes dis-barra{
       100%{
-          width: 80%;}
+          width: 60%;}
+   }
+ 
+   
+   #css-menu{
+    animation: dis-barra 2s forwards;
+   }
+ 
+   @keyframes dis-barra{
+      100%{
+          width: 60%;}
    }
  
  
@@ -79,8 +89,104 @@
  
    @keyframes diseño-barra{
      100%{
-       width: 75%;
+       width: 50%;
      }
     }
+
+
+    
+   #typescript-menu{
+    animation: d-barra 2s forwards;
+   }
+ 
+   @keyframes d-barra{
+      100%{
+          width: 30%;}
+   }
+
+
+
+
+   
+   #java-menu{
+    animation: diseño-barra 2s forwards;
+   }
+ 
+   @keyframes diseño-barra{
+      100%{
+          width: 50%;}
+   }
+
+
+   #angular-menu{
+    animation: r-barra 2s forwards;
+   }
+ 
+   @keyframes r-barra{
+      100%{
+          width: 40%;}
+   }
+
+   
+   #springboot-menu{
+    animation: diseño-barra 2s forwards;
+   }
+ 
+   @keyframes diseño-barra{
+      100%{
+          width: 50%;}
+   }
+
+  
+   #mysql-menu{
+    animation: d-barra 2s forwards;
+   }
+ 
+   @keyframes d-barra{
+      100%{
+          width: 30%;}
+   }
+
+
+   #analitica-menu{
+    animation: resol-barra 2s forwards;
+   }
+ 
+   @keyframes resol-barra{
+      100%{
+          width: 70%;}
+   }
+
+
+   #escucha-menu{
+    animation: resolucion-barra 2s forwards;
+   }
+ 
+   @keyframes resolucion-barra{
+      100%{
+          width: 80%;}
+   }
+
+   #resiliencia-menu{
+    animation: resolucion-barra 2s forwards;
+   }
+ 
+   @keyframes resolucion-barra{
+      100%{
+          width: 80%;}
+   }
+
+   #curiosidad-menu{
+    animation: re-barra 2s forwards;
+   }
+ 
+   @keyframes re-barra{
+    
+   100%{
+          width: 99%;}
+   }
+   
+
+
 
     span {color: rgb(156, 156, 253);}
