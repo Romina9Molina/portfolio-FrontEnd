@@ -1,11 +1,6 @@
-<div  class= "divclass">
+<div  class= "divclass"   *ngIf="acerca">
     <h2>Acerca de</h2>
-    <h5>Bienvenidos a mi portfolio: este es mi proyecto final del curso #YoProgramo. 
-        Lo que van a ver es producto de aplicar los conocimientos adquiridos en el mismo.
-        Para el maquetado FrontEnd se utilizo HTML, CSS , Javascript y como libreria Bootstrap.
-        Luego se incorporó Angular como framework y Typescript como lenguaje.
-        Para el BackEnd se empleo Spring Boot como framework, Java como lenguaje y MySQL para la base de datos.
-
+    <h5>{{acerca.descripcion}}
 
        <i><span>Gracias a la oportunidad del curso he recorrido un trayecto de aprendizaje y experiencia de crecimiento que me acercaron al mundo de la informática.</span></i>
     </h5>

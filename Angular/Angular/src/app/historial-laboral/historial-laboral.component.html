@@ -1,14 +1,13 @@
 <div  class="divclass">
 
     <h2>Experiencia</h2>
+    <div *ngFor="let experiencia of experiencias">
 
-    <h4><i>Atención al cliente</i>    </h4>
-    <h5>Konecta- Jornada completa</h5>
-    <h4>Junio 2019-Actualidad
-     Buenos Aires - Argentina    </h4>
+     <h4><i>{{experiencia.puesto}}</i>    </h4>
+     <h5>{{experiencia.empresa}}-{{experiencia.tipoDeContrato}}</h5>
+     <h4>{{experiencia.fin}}
+        {{experiencia.localidad}}  </h4>
    
 
-    <h4><i>Docente</i>    </h4>
-    <h5>DGCyE- Suplencias</h5>
-    <h4>2017-Junio 2019
-     Buenos Aires -Argentina  </h4> </div>
+    </div>
+</div>

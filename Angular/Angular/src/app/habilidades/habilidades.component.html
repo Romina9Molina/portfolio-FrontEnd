@@ -4,10 +4,10 @@
 
    
      <h2>Hard & Soft skills</h2>
-     <div class="skills">
-         <div class="detalles">
-           <span>HTML</span>
-           <span>60%</span>
+     <div class="skills"  *ngFor="let skills of skills"  >
+         <div class="detalles"  >
+           <span>{{skills.habilidad}}</span>
+           <span>{{skills.nivel}}</span>
          </div> 
          
         <div class="menu">
@@ -21,7 +21,7 @@
 
 
     
-     <div class="skills">
+     <!--<div class="skills">
          <div class="detalles">
            <span>CSS</span>
            <span>60%</span>
@@ -203,4 +203,4 @@
     </div>
 
 
- </div>
+ </div> -->

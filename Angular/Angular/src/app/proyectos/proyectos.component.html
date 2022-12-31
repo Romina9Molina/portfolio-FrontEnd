@@ -1,6 +1,9 @@
 <div  class="divclass">
     <h2>Proyectos</h2>
-    <h5>Proyecto UX acerca del reciclaje</h5>
-    <h4>Actualmente desarrollando un trabajo de diseño pensado para mejorar la expeiencia del usuario respecto a la concientizacion y practicas de reciclaje.
+
+    <div *ngFor="let proyectos of proyectos">
+    <h5>{{proyectos.nombre}}</h5>
+    <h4>{{proyectos.descripcion}}
     </h4>
   </div>
+</div>
