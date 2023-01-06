@@ -1,8 +1,61 @@
-<div  class= "divclass"   *ngIf="acerca">
+<div  class= "divclass  row align-items"    *ngIf="acerca">
     <h2>Acerca de</h2>
-    <h5>{{acerca.descripcion}}
+    <div  class= "g-col-4"> 
 
+
+      <div class="grid text-center d-md-flex justify-content-md-end" >
+         
+         <a
+            class="btn btn-primary tooltips"
+            data-placement="top"
+            data-toogle="tooltip"
+            data-original-title="Edit"
+            id="abrirModalEditar" (click)="openModal()"
+          ><i class="fa fa-pencil"></i>
+         </a>
+
+        
+      
+         <a
+            class="btn btn-secondary tooltips"
+            data-placement="top"
+            data-toogle="tooltip"
+            data-original-title="Delete"
+          ><i class="fa fa-times"></i>
+         </a>
+      
+      
+      </div>
+      
+    <h5>{{acerca.descripcion}}
        <i><span>Gracias a la oportunidad del curso he recorrido un trayecto de aprendizaje y experiencia de crecimiento que me acercaron al mundo de la informática.</span></i>
     </h5>
 
    </div>
+
+   <div id="ModalAcercaEditar" class="modal">
+      <div class="contenido-modal">
+         <span class="cerrar">&times;</span>
+            
+                  <div>
+                    <form  action="#">
+                      <div class="mb-4">
+                        <label for="descripcion"  class="form-label">Descripcion</label>
+                        <input type="descripcion" class="form-control"  name="descripcion" > 
+                      </div>
+                                                
+               
+
+                       
+                      <div  class="d-grid"> 
+                        <button type="submit" class="btn  btn-primary" (click)="updateAcerca()">Agregar cambios</button>
+                      </div>
+
+                     </form>
+
+                     </div>
+   </div>
+
+
+
+</div>

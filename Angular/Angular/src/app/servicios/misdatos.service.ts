@@ -19,4 +19,5 @@ private apiServerUrl=environment.apiBaseUrl;
   public updateMisDatos(persona:Persona):Observable<Persona>{
     return this.http.put<Persona>(`${this.apiServerUrl}/usuario/update`,persona);
   }
+  
 }

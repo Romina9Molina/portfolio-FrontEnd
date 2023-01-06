@@ -4,203 +4,88 @@
 
    
      <h2>Hard & Soft skills</h2>
-     <div class="skills"  *ngFor="let skills of skills"  >
+     <div  class= "g-col-4"> 
+      <div class="grid text-center d-md-flex justify-content-md-end" >
+
+             
+        <a
+           class="btn btn-primary tooltips"
+           data-placement="top"
+           data-toogle="tooltip"
+           data-original-title="Edit"
+           id="abrirModalEditar3" (click)="openModal3()"
+         ><i class="fa fa-pencil"></i>
+        </a>
+
+       
+     
+        <a
+           class="btn btn-secondary tooltips"
+           data-placement="top"
+           data-toogle="tooltip"
+           data-original-title="Delete"
+         ><i class="fa fa-times"></i>
+        </a>
+     
+     </div>
+
+     
+        
+     <div  row align-items  class="skills"   *ngFor="let skills of skills"  >
          <div class="detalles"  >
            <span>{{skills.habilidad}}</span>
-           <span>{{skills.nivel}}</span>
+          <span>{{skills.nivel}}%</span>
          </div> 
          
+            
+        
+
+
+
+
         <div class="menu">
-          <div id="html-menu">
+          <div id="menu" style="--nivel:{{skills.nivel}}% "> 
 
 
           </div>
         </div>
 
-     </div> 
+
+        <div id="ModalSkillsEditar" class="modal">
+          <div class="contenido-modal">
+             <span class="cerrar">&times;</span>
+                
+                      <div>
+                        <form  action="#">
+                          <div class="mb-4">
+                            <label for="habilidad"  class="form-label">Habilidad</label>
+                            <input type="habilidad" class="form-control"  name="habilidad" > 
+                          </div>
+  
+                          <div class="mb-4">
+                              <label for="nivel"  class="form-label">Nivel</label>
+                              <input type="nivel" class="form-control"  name="nivel" > 
+                            </div>
+
+
+                            <div  class="d-grid"> 
+                              <button type="submit" class="btn  btn-primary" (click)="updateSkills()">Agregar cambios</button>
+                            </div>
+  
+                           
+                         </form>
 
 
     
-     <!--<div class="skills">
-         <div class="detalles">
-           <span>CSS</span>
-           <span>60%</span>
-         </div> 
-         
-        <div class="menu">
-          <div id="css-menu">
-
-
-          </div>
-        </div>
-
-     </div> 
-
-
-
-     <div class="skills">
-      <div class="detalles">
-        <span>Javascript</span>
-        <span>50%</span>
-      </div> 
-      
-     <div class="menu">
-       <div id="javascript-menu">
-
-
+                         </div>
        </div>
-     </div>
-
-  </div> 
-
-
-
-  <div class="skills">
-    <div class="detalles">
-      <span>Typescript</span>
-      <span>30%</span>
-    </div> 
     
-   <div class="menu">
-     <div id="typescript-menu">
+    
+    
+    
+
+     </div> 
 
 
-     </div>
-   </div>
-
-</div> 
-
-
-<div class="skills">
-  <div class="detalles">
-    <span>JAVA</span>
-    <span>50%</span>
-  </div> 
-  
- <div class="menu">
-   <div id="java-menu">
-
-
-   </div>
- </div>
-
-</div> 
-
-
-<div class="skills">
-  <div class="detalles">
-    <span>Angular</span>
-    <span>40%</span>
-  </div> 
-  
- <div class="menu">
-   <div id="angular-menu">
-
-
-   </div>
- </div>
-
-</div> 
-
-
-
-<div class="skills">
-  <div class="detalles">
-    <span>Spring Boot</span>
-    <span>50%</span>
-  </div> 
-  
- <div class="menu">
-   <div id="springboot-menu">
-
-
-   </div>
- </div>
-
-</div> 
-
-
-<div class="skills">
-  <div class="detalles">
-    <span>MySQL</span>
-    <span>30%</span>
-  </div> 
-  
- <div class="menu">
-   <div id="mysql-menu">
-
-
-   </div>
- </div>
-
-</div> 
-
-
-
-<div class="skills">
-  <div class="detalles">
-    <span>Capacidad analitica</span>
-    <span>70%</span>
-  </div> 
-  
- <div class="menu">
-   <div id="analitica-menu">
-
-
-   </div>
- </div>
-
-</div> 
-
-<div class="skills">
-  <div class="detalles">
-    <span>Escucha activa</span>
-    <span>80%</span>
-  </div> 
-  
- <div class="menu">
-   <div id="escucha-menu">
-
-
-   </div>
- </div>
-
-</div> 
-
-<div class="skills">
-  <div class="detalles">
-    <span>Resiliencia</span>
-    <span>80%</span>
-  </div> 
-  
- <div class="menu">
-   <div id="resiliencia-menu">
-
-
-   </div>
- </div>
-
-</div> 
-
-<div class="skills">
-  <div class="detalles">
-    <span>Curiosidad y Motivación</span>
-    <span>99%</span>
-  </div> 
-  
- <div class="menu">
-   <div id="curiosidad-menu">
-
-
-   </div>
- </div>
-
-</div> 
-
-
-
-
-    </div>
-
-
- </div> -->
+    
+    

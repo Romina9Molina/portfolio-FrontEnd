@@ -63,133 +63,76 @@
    }
  
 
-   #html-menu{
+   #menu{
     animation: dis-barra 2s forwards;
    }
  
 
-   /*falta ver el tema de los porcentajes de la barra para cada habilidad */
+   
 
    @keyframes dis-barra{
       100%{
-          width: 60%;}
+          width: var(--nivel);}
    }
  
    
-   #css-menu{
-    animation: dis-barra 2s forwards;
-   }
- 
-   @keyframes dis-barra{
-      100%{
-          width: 60%;}
-   }
- 
- 
- #javascript-menu{
-    animation: diseño-barra 2s forwards;
-   }
- 
-   @keyframes diseño-barra{
-     100%{
-       width: 50%;
-     }
-    }
-
-
-    
-   #typescript-menu{
-    animation: d-barra 2s forwards;
-   }
- 
-   @keyframes d-barra{
-      100%{
-          width: 30%;}
-   }
-
-
-
-
-   
-   #java-menu{
-    animation: diseño-barra 2s forwards;
-   }
- 
-   @keyframes diseño-barra{
-      100%{
-          width: 50%;}
-   }
-
-
-   #angular-menu{
-    animation: r-barra 2s forwards;
-   }
- 
-   @keyframes r-barra{
-      100%{
-          width: 40%;}
-   }
-
-   
-   #springboot-menu{
-    animation: diseño-barra 2s forwards;
-   }
- 
-   @keyframes diseño-barra{
-      100%{
-          width: 50%;}
-   }
-
   
-   #mysql-menu{
-    animation: d-barra 2s forwards;
-   }
- 
-   @keyframes d-barra{
-      100%{
-          width: 30%;}
-   }
-
-
-   #analitica-menu{
-    animation: resol-barra 2s forwards;
-   }
- 
-   @keyframes resol-barra{
-      100%{
-          width: 70%;}
-   }
-
-
-   #escucha-menu{
-    animation: resolucion-barra 2s forwards;
-   }
- 
-   @keyframes resolucion-barra{
-      100%{
-          width: 80%;}
-   }
-
-   #resiliencia-menu{
-    animation: resolucion-barra 2s forwards;
-   }
- 
-   @keyframes resolucion-barra{
-      100%{
-          width: 80%;}
-   }
-
-   #curiosidad-menu{
-    animation: re-barra 2s forwards;
-   }
- 
-   @keyframes re-barra{
-    
-   100%{
-          width: 99%;}
-   }
-   
 
 
 
-    span {color: rgb(156, 156, 253);}
+    span {color: rgb(156, 156, 253);} 
+
+
+
+     /* Fondo modal: negro con opacidad al 50% */
+ .modal {
+  display: none; /* Por defecto, estará oculto */
+  position: fixed; /* Posición fija */
+  z-index: 2; /* Se situará por encima de otros elementos de la página*/
+  padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Algura completa */
+  overflow: auto; /* Se activará el scroll si es necesario */
+  background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+}
+
+/* Ventana o caja modal */
+.contenido-modal {
+  position: relative; /* Relativo con respecto al contenedor -modal- */
+  background: linear-gradient(450deg,darkblue, black);
+  margin: auto; /* Centrada */
+  padding: 20px;
+  width: 60%;
+  -webkit-animation-name: animarsuperior;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animarsuperior;
+  animation-duration: 0.5s
+}
+
+/* Animación */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animarsuperior {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Botón cerrar */
+.close {
+  color: white;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

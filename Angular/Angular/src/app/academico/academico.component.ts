@@ -31,10 +31,91 @@ public editEducacion: Educacion |undefined;
       })
   }
 
+  public updateEducacion():void{
+    this.educacionService.updateEducacion(this.editEducacion!).subscribe({
+      next: (response: Educacion) =>{
+        this.editEducacion=response;
+      },
+      error:(error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    })
+
+  }
+
+    
+  public createEducacion():void{
+    this.educacionService.crearEducacion(this.editEducacion!).subscribe({
+      next: (response: Educacion) =>{
+        this.editEducacion=response;
+      },
+      error:(error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    })
+  }
+
+  public deleteEducacion(id:number):void{
+    this.educacionService.deleteEducacion(id).subscribe({
+      next: (response: void) =>{
+        
+      },
+      error:(error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    })
+  }
+
+
+
+  public openModal2(){
+
+  
+    // Ventana modal
+  let modal:any = document.getElementById("ModalEducacionEditar");
+  
+  
+  
+  // Botón que abre el modal
+  let boton:any = document.getElementById("abrirModalEditar2");
+  
+  
+      // Hace referencia al elemento <span> que tiene la X que cierra la ventana
+  let span: any = document.getElementsByClassName("cerrar")[0];
+  
+  // Cuando el usuario hace click en el botón, se abre la ventana
+  boton.addEventListener("click",function() {
+    modal.style.display = "block";
+   
+  });
+  
+  // Si el usuario hace click en la x, la ventana se cierra
+  span.addEventListener("click",function() {
+    modal.style.display = "none";
+  });
+  
+  // Si el usuario hace click fuera de la ventana, se cierra.
+  window.addEventListener("click",function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+  
+
+
+
+  }
+
+
+
+
+
+
+     }
 
 /*public  transformacion(date:Date):any{
    let latest_date=this.datepipe.transform(date,"dd/MM/yyyy");
   return latest_date;
 } */
 
-}
+

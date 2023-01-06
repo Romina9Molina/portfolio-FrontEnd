@@ -20,5 +20,15 @@ export class AcercaService {
   public updateAcerca(acerca:Acerca):Observable<Acerca>{
     return this.http.put<Acerca>(`${this.apiServerUrl}/acerca/update`,acerca);
   }
+
+public deleteAcerca(id:number):Observable<void>{
+  return this.http.delete<void>(`${this.apiServerUrl}/acerca/borrar/${id}`);
+}
+
+public crearAcerca(acerca:Acerca):Observable<Acerca>{
+  return this.http.post<Acerca>(`${this.apiServerUrl}/acerca/crearacerca`,acerca);
+}
+
+
 }
 

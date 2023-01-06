@@ -31,4 +31,81 @@ export class ProyectosComponent implements OnInit {
       })
   }
 
+
+
+  public updateProyectos():void{
+    this.proyectosService.updateProyectos(this.editProyectos!).subscribe({
+      next: (response: Proyectos) =>{
+        this.editProyectos=response;
+      },
+      error:(error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    })
+  }
+
+
+  public createProyectos():void{
+    this.proyectosService.crearProyectos(this.editProyectos!).subscribe({
+      next: (response: Proyectos) =>{
+        this.editProyectos=response;
+      },
+      error:(error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    })
+  }
+
+  public deleteProyectos(id:number):void{
+    this.proyectosService.deleteProyectos(id).subscribe({
+      next: (response: void) =>{
+        
+      },
+      error:(error:HttpErrorResponse)=>{
+        alert(error.message);
+      }
+    })
+  }
+
+
+  public openModal4(){
+
+  
+    // Ventana modal
+  let modal:any = document.getElementById("ModalProyectosEditar");
+  
+  
+  
+  // Botón que abre el modal
+  let boton:any = document.getElementById("abrirModalEditar4");
+  
+  
+      // Hace referencia al elemento <span> que tiene la X que cierra la ventana
+  let span: any = document.getElementsByClassName("cerrar")[0];
+  
+  // Cuando el usuario hace click en el botón, se abre la ventana
+  boton.addEventListener("click",function() {
+    modal.style.display = "block";
+   
+  });
+  
+  // Si el usuario hace click en la x, la ventana se cierra
+  span.addEventListener("click",function() {
+    modal.style.display = "none";
+  });
+  
+  // Si el usuario hace click fuera de la ventana, se cierra.
+  window.addEventListener("click",function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+  
+
+
+
+  }
+
+
+
 }

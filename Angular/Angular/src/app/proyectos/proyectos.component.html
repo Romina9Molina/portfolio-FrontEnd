@@ -1,9 +1,72 @@
 <div  class="divclass">
     <h2>Proyectos</h2>
 
-    <div *ngFor="let proyectos of proyectos">
+
+    <div  class= "g-col-4"> 
+
+
+      <div class="grid text-center d-md-flex justify-content-md-end" >
+         
+         <a
+            class="btn btn-primary tooltips"
+            data-placement="top"
+            data-toogle="tooltip"
+            data-original-title="Edit"
+            id="abrirModalEditar4" (click)="openModal4()"
+          ><i class="fa fa-pencil"></i>
+         </a>
+
+        
+      
+         <a
+            class="btn btn-secondary tooltips"
+            data-placement="top"
+            data-toogle="tooltip"
+            data-original-title="Delete"
+          ><i class="fa fa-times"></i>
+         </a>
+      
+      
+      </div>
+
+
+
+    <div     row align-items  *ngFor="let proyectos of proyectos">
     <h5>{{proyectos.nombre}}</h5>
     <h4>{{proyectos.descripcion}}
     </h4>
   </div>
+
+
+  <div id="ModalProyectosEditar" class="modal">
+    <div class="contenido-modal">
+       <span class="cerrar">&times;</span>
+          
+                <div>
+                  <form  action="#">
+                    <div class="mb-4">
+                      <label for="nombre"  class="form-label">Nombre</label>
+                      <input type="nombre" class="form-control"  name="nombre" > 
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="descripcion"  class="form-label">Descripción</label>
+                        <input type="descripcion" class="form-control"  name="descripcion" > 
+                      </div>
+
+
+                      <div  class="d-grid"> 
+                        <button type="submit" class="btn  btn-primary" (click)="updateProyectos()">Agregar cambios</button>
+                      </div>
+
+                     
+                   </form>
+
+
+
+                   </div>
+ </div>
+
+
+
 </div>

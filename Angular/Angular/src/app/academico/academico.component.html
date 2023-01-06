@@ -1,10 +1,84 @@
 <div  class="divclass" >
     <h2>Educación</h2>
-    <div *ngFor="let educacion of educaciones">
+
+
+    <div  class= "g-col-4"> 
+
+
+     <div class="grid text-center d-md-flex justify-content-md-end" >
+        
+        <a
+           class="btn btn-primary tooltips"
+           data-placement="top"
+           data-toogle="tooltip"
+           data-original-title="Edit"
+           id="abrirModalEditar2" (click)="openModal2()"
+         ><i class="fa fa-pencil"></i>
+        </a>
+
+       
+     
+        <a
+           class="btn btn-secondary tooltips"
+           data-placement="top"
+           data-toogle="tooltip"
+           data-original-title="Delete"
+         ><i class="fa fa-times"></i>
+        </a>
+     
+     
+     </div>
+
+
+
+    <div  row align-items   *ngFor="let educacion of educaciones">
     <h5>{{educacion.carrera}}
          Concluido en {{educacion.fin}}</h5>     
      
     </div>
+
+
+    <div id="ModalEducacionEditar" class="modal">
+     <div class="contenido-modal">
+        <span class="cerrar">&times;</span>
+           
+                 <div>
+                   <form  action="#">
+                     <div class="mb-4">
+                       <label for="inicio"  class="form-label">Inicio</label>
+                       <input type="inicio" class="form-control"  name="inicio" > 
+                     </div>
+
+                     <div class="mb-4">
+                         <label for="fin"  class="form-label">Fin</label>
+                         <input type="fin" class="form-control"  name="fin" > 
+                       </div>
+
+                       <div class="mb-4">
+                         <label for="institucion"  class="form-label">Institución</label>
+                         <input type="institucion" class="form-control"  name="institucion" > 
+                       </div>
+
+                       <div class="mb-4">
+                         <label for="carrera"  class="form-label">Carrera</label>
+                         <input type="carrera" class="form-control"  name="carrera" > 
+                       </div>
+
+                                          
+
+                      
+                     <div  class="d-grid"> 
+                       <button type="submit" class="btn  btn-primary" (click)="updateEducacion()">Agregar cambios</button>
+                     </div>
+
+                    </form>
+
+                    </div>
+  </div>
+
+
+
+
     
 
    </div>

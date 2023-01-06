@@ -19,5 +19,16 @@ export class ProyectosService {
 
   public updateProyectos(proyectos:Proyectos):Observable<Proyectos>{
     return this.http.put<Proyectos>(`${this.apiServerUrl}/proyectos/update`,proyectos);
-  }
+ 
+ }
+
+
+ public deleteProyectos(id:number):Observable<void>{
+  return this.http.delete<void>(`${this.apiServerUrl}/proyectos/borrar/${id}`);
+}
+
+public crearProyectos(proyectos:Proyectos):Observable<Proyectos>{
+  return this.http.post<Proyectos>(`${this.apiServerUrl}/proyectos/crearpro`,proyectos);
+}
+
 }

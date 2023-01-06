@@ -1,7 +1,39 @@
 
     
-    <div class= "presentacion"   *ngIf="persona">
-     
+    <div class= "presentacion"    >
+
+
+        <div  class= "g-col-4"> 
+
+
+            <div class="grid text-center d-md-flex justify-content-md-end" >
+               
+               <a
+                  class="btn btn-primary tooltips"
+                  data-placement="top"
+                  data-toogle="tooltip"
+                  data-original-title="Edit"
+                  id="abrirModalEditarPersona" (click)="openModalPersona()"
+                ><i class="fa fa-pencil"></i>
+               </a>
+      
+              
+            
+               <a
+                  class="btn btn-secondary tooltips"
+                  data-placement="top"
+                  data-toogle="tooltip"
+                  data-original-title="Delete"
+                ><i class="fa fa-times"></i>
+               </a>
+            
+            
+            </div>
+      
+      
+      
+     <div row align-items    *ngIf="persona">
+        {{persona.url}}
     <h2>{{persona.nombre}}</h2>
     <h2>{{persona.apellido}}</h2>
     <h2><i>{{persona.titulo}}</i></h2>   
@@ -9,3 +41,56 @@
 
     </div>
 
+
+
+    <div id="ModalPersonaEditar" class="modal">
+        <div class="contenido-modal">
+           <span class="cerrar">&times;</span>
+              
+                    <div>
+                      <form  action="#">
+                        <div class="mb-4">
+                          <label for="nombre"  class="form-label">Nombre</label>
+                          <input type="nombre" class="form-control"  name="nombre" > 
+                        </div>
+    
+                        <div class="mb-4">
+                            <label for="apellido"  class="form-label">Apellido</label>
+                            <input type="apellido" class="form-control"  name="apellido" > 
+                          </div>
+                          <div class="mb-4">
+                            <label for="titulo"  class="form-label">Título</label>
+                            <input type="titulo" class="form-control"  name="titulo" > 
+                          </div>
+    
+                          <div class="mb-4">
+                            <label for="mail"  class="form-label">Mail</label>
+                            <input type="mail" class="form-control"  name="mail" > 
+                          </div>
+    
+                          <div class="mb-4">
+                            <label for="url"  class="form-label">Url Foto</label>
+                            <input type="url" class="form-control"  name="url" > 
+                          </div>
+
+                          <div class="mb-4">
+                            <label for="localidad"  class="form-label">Localidad</label>
+                            <input type="localidad" class="form-control"  name="localidad" > 
+                          </div>
+
+
+    
+    
+    
+                          <div  class="d-grid"> 
+                            <button type="submit" class="btn  btn-primary" (click)="updateMisDatos()">Agregar cambios</button>
+                          </div>
+    
+                         
+                       </form>
+    
+    
+    
+                       </div>
+     </div>
+</div>
